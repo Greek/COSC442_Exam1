@@ -51,4 +51,11 @@ public class CombatRulesTest {
 
         assertEquals(80, res);
     }
+
+    @Test
+    public void testCombatRules_calculateNewHpLeavesHpAtMaximumWhenNotAboveIt() {
+        int res = CombatRules.calculateNewHp(90, 100, 10);
+
+        assertEquals(100, res);
+    }
 }
